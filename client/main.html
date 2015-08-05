@@ -1,0 +1,46 @@
+<head>
+	<title>Scavenger Hunt</title>
+	<meta name="apple-mobile-web-app-title" content="Scavenger Hunt">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body>
+
+</body>
+
+<template name="submit">
+	<div class="container">
+		<div class="row">
+
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Team</label>
+					<select class="form-control" id="team">
+						<option disabled>Select One</option>
+						{{#each teams}}
+						<option value={{_id}}>{{name}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Item</label>
+					<select class="form-control" id="item">
+						<option disabled>Select One</option>
+						{{#each items}}
+						<option value={{_id}}>{{name}}</option>
+						{{/each}}
+					</select>				
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">File input</label>
+					<input class="form-control" type="file" id="picture">
+					<p class="help-block">Tip: Click here to take the photo</p>
+				</div>
+				<button type="button" class="btn btn-default submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</template>
